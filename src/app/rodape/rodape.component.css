@@ -1,0 +1,25 @@
+.bg-rodape{
+    background-color: #FDFBFA;    
+}
+
+.text-rodape{
+    color: #422157;
+    font-family: arial;
+    font-size: 20px;
+}
+
+a{
+    cursor: pointer;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+}
+
+.fa-instagram:hover{
+    color: #C13584;
+  }
+  
+.fa-linkedin-square:hover{
+    color: #0072b1;
+  }
