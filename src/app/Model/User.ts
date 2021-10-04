@@ -7,6 +7,4 @@ export class User{
 	public senha: string
     public foto: string
     public postagem : Postagem[]
-	
-	
 }
