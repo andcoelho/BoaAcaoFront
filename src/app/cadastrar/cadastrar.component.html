@@ -5,35 +5,36 @@
             <div class="card">
 
                 <div class="form-group">
-                    <h2>Boa Ação</h2>
-
-                    <input class="form-control mt-5" type="text" name="usuario" id="usuario"
-                     placeholder="Seu Usuario">
+                    <h2>Boa Ação</h2>                                        
                 </div>
-                <div class="form-group">
 
-                    <input class="form-control" type="email" name="email" id="email" 
+                <div class="form-group">
+                    <input class="form-control mt-3" type="email" name="email" id="email" 
                     placeholder="Seu E-mail">
                 </div>
 
                 <div class="form-group">
+                    <input class="form-control" type="text" name="nome" id="nome"
+                     placeholder="Seu Nome">                    
+                </div>
 
+                <div class="form-group">
                     <input class="form-control" type="password" name="senha" id="senha" 
                     placeholder="Sua senha">
                 </div>
                 <div class="form-group">
 
-                    <input class="form-control" type="password" name="senha" id="senha" 
+                    <input class="form-control mb-3" type="password" name="senha" id="senha" 
                     placeholder="Confirme sua senha">
                 </div>
+                           
                 <div class="form-group">
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="Cadastrar">Cadastrar</button>
+                        <button type="submit" class="cadastrar" (click)='cadastrar()'>Cadastrar</button>
                     </div>
-                </div>
-                <div class="form-group">
+               
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="cancelar">Cancelar</button>
+                        <button type="submit" class="cancelar" routerLink='/login'>Cancelar</button>
                     </div>
                 </div>
 

@@ -16,11 +16,11 @@ export class AuthService {
 
 
   entrar(emailLogin:UserLogin):Observable<UserLogin>{
-    return this.http.post<UserLogin>('LINK DO PROJETO', emailLogin)
+    return this.http.post<UserLogin>('https://boaacaopi.herokuapp.com/usuario/logar', emailLogin)
   }
 
   cadastrar(email:User):Observable<User>{
-    return this.http.post<User>('LINK DO PROJETO',email)
+    return this.http.post<User>('https://boaacaopi.herokuapp.com/usuario/cadastrar',email)
   }
 
   logado(){
