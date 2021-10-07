@@ -1,0 +1,120 @@
+<!-- Navbar da pagina principal -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item active">
+                <img src="https://i.imgur.com/ijZrqqo.jpeg" alt="imagem do user" width="50px" height="50px"
+                    class="img-fluid  rounded-circle">
+            </li>
+            <li class="nav-item pl-3">
+                <p class="m-0 font-weight-bold text-navbar fs-16">Boa Ação</p>
+            </li>
+            <li class="nav-item pl-3">
+                <a href="">
+                    <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <p>
+                </a>
+            </li>
+            <li class="nav-item pl-3">
+                <p class="m-0 font-weight-bold text-navbar fs-16"> <a class="text-navbar" href="">Configurações</a></p>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mt-3 d-flex align-items-center">
+            <li class="nav-item pl-3">
+                <p class="mr-3 font-weight-bold fs-16"> <a class="text-navbar" href="">Atualizações</a> </p>
+            </li>
+            <li class="nav-item pl-3">
+                <p class="mr-3 font-weight-bold"><a class="text-navbar" href="">Sair</a></p>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Modal -->
+<div class="container">
+    <div class="row justify-content-center mt-3">
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+            Abrir modal de demonstração
+        </button>
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-grop">
+                            <label for="">Título</label>
+                            <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Título da postagem">
+                        </div>
+
+                        <div class="form-grop">
+                            <label for="">Texto</label>
+                            <textarea [(ngModel)]="postagem.corpo" class="form-control" name="" id="texto" cols="30" rows="4" placeholder="Texto"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Categoria</label>
+                            <input type="text" class="form-control" id="categoria" placeholder="Escolha a categoria da postagem">
+                        </div>
+
+                        <div class="form-grop">
+                            <label for="">Imagem</label>
+                            <input type="text" class="form-control" id="localidade" placeholder="Link da imagem">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Card central -->
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="card mt-5" style="width: 30rem;">
+            <img class="card-img-top" src="https://i.imgur.com/TUSqZLC.jpg" alt="Imagem de capa do card">
+            <div class="card-body">
+                <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o
+                    conteúdo do card.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Card decks -->
+    <div class="row mt-5 justify-content-center">
+        <div class="card-deck" style="width: 40rem;">
+            <div class="card mr-5">
+                <img class="card-img-top" src="https://i.imgur.com/snqcJr3.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Título do card</h5>
+                    <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma
+                        introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
+                    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                </div>
+            </div>
+
+            <div class="card ml-5">
+                <img class="card-img-top" src="https://i.imgur.com/snqcJr3.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Título do card</h5>
+                    <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma
+                        introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para
+                        mostrar a altura igual, em ação.</p>
+                    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

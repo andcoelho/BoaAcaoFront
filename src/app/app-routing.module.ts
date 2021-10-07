@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
 
@@ -11,12 +12,12 @@ const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
-
-  {path: 'inicio', component: InicioComponent}
+  {path: 'inicio', component: InicioComponent},
+  {path: 'principal', component: PrincipalComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
