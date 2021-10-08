@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 
@@ -27,7 +28,9 @@ import { PrincipalComponent } from './principal/principal.component';
     CadastrarComponent,
     InicioComponent,
     EquipeComponent,
-    PrincipalComponent
+    PrincipalComponent,
+
+    PostagemDeleteComponent
 
   ],
   imports: [

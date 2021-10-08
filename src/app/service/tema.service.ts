@@ -17,22 +17,22 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://blogrenata.herokuapp.com/tema', this.token)
+    return this.http.get<Tema[]>('https://boaacaopi.herokuapp.com/postagem', this.token)
   }
 
   getByIdTema(id: number): Observable<Tema>{
-    return this.http.get<Tema>(`https://blogrenata.herokuapp.com/tema/${id}`, this.token)
+    return this.http.get<Tema>(`https://boaacaopi.herokuapp.com/postagem/${id}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://blogrenata.herokuapp.com/tema', tema, this.token)
+    return this.http.post<Tema>('https://boaacaopi.herokuapp.com/postagem', tema, this.token)
   }
 
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://blogrenata.herokuapp.com/tema', tema, this.token)
+    return this.http.put<Tema>('https://boaacaopi.herokuapp.com/postagem/tema', tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`https://blogrenata.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`https://boaacaopi.herokuapp.com/postagem/tema/${id}`, this.token)
   }
 }
