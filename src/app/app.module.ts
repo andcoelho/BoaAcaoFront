@@ -11,11 +11,11 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
+
 import { EquipeComponent } from './equipe/equipe.component';
-=======
+
 import { PrincipalComponent } from './principal/principal.component';
->>>>>>> f0c887f352b6d7749bc30de2b8d81eea17ae8841
+
 
 
 @NgModule({
@@ -26,11 +26,9 @@ import { PrincipalComponent } from './principal/principal.component';
     LoginComponent,
     CadastrarComponent,
     InicioComponent,
-<<<<<<< HEAD
-    EquipeComponent
-=======
+    EquipeComponent,
     PrincipalComponent
->>>>>>> f0c887f352b6d7749bc30de2b8d81eea17ae8841
+
   ],
   imports: [
     BrowserModule,
