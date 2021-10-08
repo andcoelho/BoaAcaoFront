@@ -18,7 +18,9 @@ const routes: Routes = [
 
   {path: 'equipe', component: EquipeComponent},
 
-  {path: 'principal', component: PrincipalComponent}
+  {path: 'principal', component: PrincipalComponent},
+
+  
 
 ];
 
