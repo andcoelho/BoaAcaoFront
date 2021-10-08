@@ -26,12 +26,20 @@ export class AuthService {
   getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/${id}`)
   }
+  
   logado(){
     let ok: boolean = false
     if (environment.token != ""){
       ok = true
     }
     return ok
+  }
 
+  naoLogado(){
+    let ok: boolean = true
+    if (environment.token != ""){
+      ok = false
+    }
+    return ok
   }
 }

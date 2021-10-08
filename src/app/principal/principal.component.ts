@@ -37,7 +37,6 @@ export class PrincipalComponent implements OnInit {
       this.router.navigate(['/entrar'])           
     }
 
-    this.getAllPostagens()
   }
 
   getAllPostagens(){
@@ -52,7 +51,7 @@ export class PrincipalComponent implements OnInit {
     })
   }
 
-  publicar(){
+  postar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
@@ -63,7 +62,6 @@ export class PrincipalComponent implements OnInit {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens()
     })
   }
 }
