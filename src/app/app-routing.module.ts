@@ -11,8 +11,7 @@ import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'login',
-  pathMatch: 'full'},
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
 
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
@@ -21,7 +20,6 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent},
   {path: 'principal', component: PrincipalComponent}
-
 ];
 
 @NgModule({

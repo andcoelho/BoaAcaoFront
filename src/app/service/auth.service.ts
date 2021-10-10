@@ -41,6 +41,13 @@ export class AuthService {
       ok = true
     }
     return ok
+  }
 
+  naoLogado(){
+    let ok: boolean = true
+    if (environment.token != ""){
+      ok = false
+    }
+    return ok
   }
 }

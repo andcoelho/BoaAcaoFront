@@ -11,3 +11,9 @@
 a{
     cursor: pointer;    
 }
+
+.bt-edicao{
+    background-color: #422157;
+    color: #EDC927;
+    font-family: arial;
+}
