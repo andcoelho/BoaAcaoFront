@@ -6,6 +6,7 @@ import { Tema } from '../Model/Tema';
 import { User } from '../Model/User';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-principal',
@@ -22,22 +23,28 @@ export class PrincipalComponent implements OnInit {
   idTema: number
 
   user: User = new User()
+  nomeUser = environment.nome
+  emailUser = environment.email
   idUser = environment.id
 
   constructor(
     private router: Router,
     private postagemService: PostagemService,
+    private temaService: TemaService,
     private authService: AuthService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
 
-    if(environment.token == ""){
-      this.router.navigate(['/entrar'])           
+    if(environment.token == ''){
+      this.router.navigate(['/login'])           
     }
 
+    this.getAllTemas()
     this.getAllPostagens()
+    this.findByNomeUser()
+    
   }
 
   getAllPostagens(){
@@ -46,9 +53,27 @@ export class PrincipalComponent implements OnInit {
     })
   }
 
-  findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: User)=>{
+  findByEmailUser(){
+    this.authService.getByEmailUser(this.emailUser).subscribe((resp: User)=>{
       this.user = resp
+    })
+  }
+
+  findByNomeUser(){
+    this.authService.getByNomeUser(this.nomeUser).subscribe((resp: User)=>{
+      this.user = resp
+    })
+  }
+
+  findByIdTema(){
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
+      this.tema = resp
+    })
+  }
+
+  getAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[])=>{
+      this.listaTemas = resp
     })
   }
 
@@ -64,6 +89,7 @@ export class PrincipalComponent implements OnInit {
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
+      this.findByNomeUser()
     })
   }
 }

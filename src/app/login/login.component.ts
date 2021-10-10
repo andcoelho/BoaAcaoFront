@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  emailLogin: UserLogin = new UserLogin()
+  userLogin: UserLogin = new UserLogin()
 
   constructor(
     private auth: AuthService,
@@ -21,19 +21,27 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
   }
+
   entrar(){
-    this.auth.entrar(this.emailLogin).subscribe((resp:UserLogin)=>{
-    this.emailLogin=resp
+    this.auth.entrar(this.userLogin).subscribe((resp:UserLogin)=>{
+    this.userLogin=resp
     
-    environment.token = this.emailLogin.token
-    environment.nome = this.emailLogin.nome
-    environment.foto = this.emailLogin.foto
-    environment.id = this.emailLogin.id
+    environment.token = this.userLogin.token
+    environment.nome = this.userLogin.nome
+    environment.foto = this.userLogin.foto
+    environment.id = this.userLogin.id
+    environment.email = this.userLogin.email
+
   
-    console.log(environment.token)
-    console.log(environment.nome)
-    console.log(environment.foto)
+    /*console.log(this.userLogin.token)
+    console.log(this.userLogin.nome)
+    console.log(this.userLogin.foto)
+    console.log(this.userLogin.id)*/
+    console.log(environment.email)
     console.log(environment.id)
+    console.log(environment.nome)
+    console.log(environment.token)
+    console.log(environment.foto)
   
     this.router.navigate(['/principal'])
     }, erro => {

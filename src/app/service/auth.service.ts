@@ -15,8 +15,8 @@ export class AuthService {
   ) {}
 
 
-  entrar(emailLogin:UserLogin):Observable<UserLogin>{
-    return this.http.post<UserLogin>('https://boaacaopi.herokuapp.com/usuario/logar', emailLogin)
+  entrar(userLogin:UserLogin):Observable<UserLogin>{
+    return this.http.post<UserLogin>('https://boaacaopi.herokuapp.com/usuario/logar', userLogin)
   }
 
   cadastrar(email:User):Observable<User>{
@@ -26,9 +26,18 @@ export class AuthService {
   getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/${id}`)
   }
+
+  getByEmailUser(email: string): Observable<User>{
+    return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/email/${email}`)
+  }
+
+  getByNomeUser(nome: string): Observable<User>{
+    return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/nome/${nome}`)
+  }
+
   logado(){
     let ok: boolean = false
-    if (environment.token != ""){
+    if (environment.token != ''){
       ok = true
     }
     return ok
