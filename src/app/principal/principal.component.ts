@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -17,7 +18,8 @@ export class PrincipalComponent implements OnInit {
 
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
-  
+  postagemAtivo: boolean = true
+
   tema: Tema = new Tema
   listaTemas: Tema[]
   idTema: number
@@ -31,8 +33,13 @@ export class PrincipalComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private http: HttpClient
   ) { }
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
 
   ngOnInit() {
     window.scroll(0,0)
@@ -43,13 +50,28 @@ export class PrincipalComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
-    this.findByNomeUser()
+    this.findByIdUser()
+
+    this.user.nome = environment.nome
+    this.user.id = environment.id
+    this.user.foto = environment.foto
+    this.user.email = environment.email
     
   }
 
   getAllPostagens(){
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
       this.listaPostagens = resp
+    })
+  }
+
+  findByIdUser(){
+    this.authService.getById(this.idUser).subscribe((resp: User)=>{
+      this.user = resp
+console.log("FIND ID - ",this.user.id)
+console.log("FIND ID - ",this.user.nome)
+console.log("FIND ID - ",this.user.email)
+console.log("FIND ID - ",this.user.foto)
     })
   }
 
@@ -80,8 +102,7 @@ export class PrincipalComponent implements OnInit {
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
-
-    this.user.id = this.idUser
+    this.postagem.ativo = this.postagemAtivo
     this.postagem.usuario = this.user
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
@@ -89,7 +110,7 @@ export class PrincipalComponent implements OnInit {
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
-      this.findByNomeUser()
+      this.findByIdUser()
     })
   }
 }
