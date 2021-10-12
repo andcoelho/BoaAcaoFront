@@ -16,11 +16,11 @@ import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-<<<<<<< HEAD
+
 import { MenulogadoComponent } from './menulogado/menulogado.component';
-=======
+
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
->>>>>>> d1b66e9d33772c4f46ef767f71e7b91dbdcafbc4
+
 
 
 
@@ -34,14 +34,14 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     InicioComponent,
     EquipeComponent,
     PrincipalComponent,
-<<<<<<< HEAD
+
 
     PostagemDeleteComponent,
-      MenulogadoComponent
-=======
+      MenulogadoComponent,
+
     PostagemEditComponent,
     PostagemDeleteComponent
->>>>>>> d1b66e9d33772c4f46ef767f71e7b91dbdcafbc4
+
 
   ],
   imports: [

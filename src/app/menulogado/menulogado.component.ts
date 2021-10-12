@@ -13,7 +13,7 @@ export class MenulogadoComponent implements OnInit {
   foto = environment.foto
 
   constructor(
-    private router: Router
+    private router: Router 
   ) { }
 
   ngOnInit(): void {
