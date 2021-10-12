@@ -9,6 +9,7 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { SobreComponent } from './sobre/sobre.component';
  
 
 const routes: Routes = [
@@ -17,8 +18,8 @@ const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
-
   {path: 'equipe', component: EquipeComponent},
+  {path: 'sobre', component: SobreComponent},
 
   {path: 'inicio', component: InicioComponent},
   {path: 'principal', component: PrincipalComponent},

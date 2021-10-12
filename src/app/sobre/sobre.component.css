@@ -1,0 +1,33 @@
+.bg-jumbotrom{
+    background-color: #422157;    
+}
+.fundo-amarelo{
+    background-color: #EDC927;
+}
+
+.titulo-amarelo{
+    color: #EDC927;
+    font-family: arial;
+    font-style: oblique;
+}
+
+.titulo-roxo{
+    color: #422157;
+    font-family: arial;
+    font-style: oblique;
+}
+
+.paragrafo-amarelo{
+    color: #EDC927;
+    font-family: arial;
+    font-size: 16px;
+}
+.paragrafo-roxo{
+    color: #422157;
+    font-family: arial;
+    font-size: 16px;
+}
+
+a{
+    cursor: pointer;    
+}

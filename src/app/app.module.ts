@@ -17,6 +17,7 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 
@@ -31,7 +32,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     EquipeComponent,
     PrincipalComponent,
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    SobreComponent
 
   ],
   imports: [
