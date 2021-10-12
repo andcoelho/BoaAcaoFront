@@ -16,8 +16,12 @@ import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+
+import { MenulogadoComponent } from './menulogado/menulogado.component';
+
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { SobreComponent } from './sobre/sobre.component';
+
 
 
 
@@ -31,9 +35,15 @@ import { SobreComponent } from './sobre/sobre.component';
     InicioComponent,
     EquipeComponent,
     PrincipalComponent,
+
+
+    PostagemDeleteComponent,
+      MenulogadoComponent,
+
     PostagemEditComponent,
     PostagemDeleteComponent,
     SobreComponent
+
 
   ],
   imports: [

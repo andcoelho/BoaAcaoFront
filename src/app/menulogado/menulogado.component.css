@@ -12,18 +12,6 @@ a{
     cursor: pointer;    
 }
 
-.bt-edicao{
-    background-color: #422157;
-    color: #EDC927;
-    font-family: arial;
-}
-
-.botao-modal {
-	background-color: #ffff;
-	border-color: #422157;
-    color: #422157
-}
-
 .nomeuser{
     margin-top: 0;
     margin-bottom: 0;

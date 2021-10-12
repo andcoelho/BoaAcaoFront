@@ -16,6 +16,9 @@ import { TemaService } from '../service/tema.service';
 })
 export class PrincipalComponent implements OnInit {
 
+  nome = environment.nome
+  foto = environment.foto
+
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
   tituloPost: string
@@ -123,5 +126,14 @@ export class PrincipalComponent implements OnInit {
       this.getAllPostagens()
       this.findByIdUser()
     })
+  }
+
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token = ''
+    environment.nome = ''
+    environment.email = ''
+    environment.foto = ''
+    environment.id = 0
   }
 }

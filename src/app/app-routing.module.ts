@@ -7,9 +7,16 @@ import { InicioComponent } from './inicio/inicio.component';
 import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
+
+import { MenulogadoComponent } from './menulogado/menulogado.component';
+
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+
 import { SobreComponent } from './sobre/sobre.component';
+
+
+
  
 
 const routes: Routes = [
@@ -23,9 +30,15 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent},
   {path: 'principal', component: PrincipalComponent},
+
+
+  {path: 'menulog', component: MenulogadoComponent},
+  
+
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
