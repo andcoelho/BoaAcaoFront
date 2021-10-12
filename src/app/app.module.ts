@@ -16,6 +16,7 @@ import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 
 
 
@@ -29,7 +30,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     InicioComponent,
     EquipeComponent,
     PrincipalComponent,
-
+    PostagemEditComponent,
     PostagemDeleteComponent
 
   ],
@@ -37,7 +38,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [{
     provide:LocationStrategy,
