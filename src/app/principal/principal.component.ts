@@ -18,6 +18,7 @@ export class PrincipalComponent implements OnInit {
 
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
+  tituloPost: string
   postagemAtivo: boolean = true
 
   tema: Tema = new Tema
@@ -28,6 +29,7 @@ export class PrincipalComponent implements OnInit {
   nomeUser = environment.nome
   emailUser = environment.email
   idUser = environment.id
+
 
   constructor(
     private router: Router,
@@ -50,7 +52,6 @@ export class PrincipalComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
-    this.findByIdUser()
 
     this.user.nome = environment.nome
     this.user.id = environment.id
@@ -66,12 +67,12 @@ export class PrincipalComponent implements OnInit {
   }
 
   findByIdUser(){
-    this.authService.getById(this.idUser).subscribe((resp: User)=>{
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User)=>{
       this.user = resp
-console.log("FIND ID - ",this.user.id)
-console.log("FIND ID - ",this.user.nome)
-console.log("FIND ID - ",this.user.email)
-console.log("FIND ID - ",this.user.foto)
+      console.log("FIND ID - ",this.user.id)
+      console.log("FIND ID - ",this.user.nome)
+      console.log("FIND ID - ",this.user.email)
+      console.log("FIND ID - ",this.user.foto)
     })
   }
 
@@ -91,6 +92,16 @@ console.log("FIND ID - ",this.user.foto)
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
       this.tema = resp
     })
+  }
+
+  findByTituloPostagem(){
+    if(this.tituloPost == ''){
+      this.getAllPostagens()
+    }else{
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=>{
+        this.listaPostagens = resp
+      })
+    }
   }
 
   getAllTemas(){

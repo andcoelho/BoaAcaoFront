@@ -23,7 +23,7 @@ export class AuthService {
     return this.http.post<User>('https://boaacaopi.herokuapp.com/usuario/cadastrar',email)
   }
 
-  getById(id: number): Observable<User>{
+  getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/${id}`)
   }
 

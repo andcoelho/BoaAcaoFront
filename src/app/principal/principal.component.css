@@ -17,3 +17,9 @@ a{
     color: #EDC927;
     font-family: arial;
 }
+
+.botao-modal {
+	background-color: #ffff;
+	border-color: #422157;
+    color: #422157
+}
