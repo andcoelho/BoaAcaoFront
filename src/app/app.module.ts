@@ -16,6 +16,7 @@ import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { MenulogadoComponent } from './menulogado/menulogado.component';
 
 
 
@@ -30,7 +31,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     EquipeComponent,
     PrincipalComponent,
 
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+      MenulogadoComponent
 
   ],
   imports: [

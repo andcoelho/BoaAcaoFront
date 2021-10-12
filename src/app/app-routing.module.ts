@@ -7,6 +7,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { EquipeComponent } from './equipe/equipe.component';
 
 import { PrincipalComponent } from './principal/principal.component';
+import { MenulogadoComponent } from './menulogado/menulogado.component';
  
 
 const routes: Routes = [
@@ -19,8 +20,10 @@ const routes: Routes = [
   {path: 'equipe', component: EquipeComponent},
 
   {path: 'inicio', component: InicioComponent},
-  {path: 'principal', component: PrincipalComponent}
-];
+  {path: 'principal', component: PrincipalComponent},
+
+  {path: 'menulog', component: MenulogadoComponent}
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
