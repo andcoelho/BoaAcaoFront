@@ -117,15 +117,7 @@ export class PrincipalComponent implements OnInit {
     }
   }
 
-  findByCategoria(){
-    if(this.temaCategoria == ''){
-      this.getAllPostagens()
-    }else{
-      this.postagemService.getByCategoria(this.tituloPost).subscribe((resp: Postagem[])=>{
-        this.listaPostagens = resp
-      })
-    }
-  }
+
 
   getAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[])=>{
