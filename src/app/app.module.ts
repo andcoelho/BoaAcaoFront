@@ -22,6 +22,8 @@ import { MenulogadoComponent } from './menulogado/menulogado.component';
 
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { SobreComponent } from './sobre/sobre.component';
+
 
 
 
@@ -41,7 +43,8 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
       MenulogadoComponent,
 
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    SobreComponent
 
 
   ],
