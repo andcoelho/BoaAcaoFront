@@ -94,6 +94,7 @@ export class PrincipalComponent implements OnInit {
     })
   }
 
+
   findByNomeUser(){
     this.authService.getByNomeUser(this.nomeUser).subscribe((resp: User)=>{
       this.user = resp
@@ -115,6 +116,8 @@ export class PrincipalComponent implements OnInit {
       })
     }
   }
+
+
 
   getAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[])=>{
