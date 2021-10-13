@@ -9,6 +9,8 @@ import { UserLogin } from '../Model/UserLogin';
   providedIn: 'root'
 })
 export class AuthService {
+  getByUser: any;
+
 
   constructor(
     private http: HttpClient
@@ -22,6 +24,9 @@ export class AuthService {
   cadastrar(email:User):Observable<User>{
     return this.http.post<User>('https://boaacaopi.herokuapp.com/usuario/cadastrar',email)
   }
+
+  atualizar(user: User): Observable<User> {
+    return this.http.put<User>('https://boaacaopi.herokuapp.com/usuario/atualizar', user)}
 
   getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://boaacaopi.herokuapp.com/usuario/${id}`)

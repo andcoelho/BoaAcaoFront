@@ -12,6 +12,7 @@ import { MenulogadoComponent } from './menulogado/menulogado.component';
 
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
  
 
@@ -29,8 +30,7 @@ const routes: Routes = [
 
 
   {path: 'menulog', component: MenulogadoComponent},
-  
-
+   {path:'user-edit/:id', component: UserEditComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 ];

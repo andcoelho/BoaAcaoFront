@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-equipe',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipe.component.css']
 })
 export class EquipeComponent implements OnInit {
+  nome = environment.nome
+  foto = environment.foto
 
-  constructor() { }
+  constructor(
+    private router: Router 
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0, 0)
+  }
+
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token = ''
+    environment.nome = ''
+    environment.email = ''
+    environment.foto = ''
+    environment.id = 0
   }
 
 }

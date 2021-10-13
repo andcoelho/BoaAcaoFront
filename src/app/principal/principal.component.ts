@@ -18,7 +18,8 @@ export class PrincipalComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
-
+  id = environment.id
+  
   postagem: Postagem = new Postagem
   listaPostagens: Postagem[]
   tituloPost: string

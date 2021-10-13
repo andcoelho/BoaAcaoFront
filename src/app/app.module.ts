@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
@@ -20,7 +21,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { MenulogadoComponent } from './menulogado/menulogado.component';
 
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 
@@ -34,7 +35,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     InicioComponent,
     EquipeComponent,
     PrincipalComponent,
-
+    UserEditComponent,
 
     PostagemDeleteComponent,
       MenulogadoComponent,
@@ -49,6 +50,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide:LocationStrategy,
