@@ -79,14 +79,14 @@
 </div>
 
 <!-- Abas -->
-<div class="container mt-5" id="postagens">
+<div class="container  mt-5" id="postagens">
     <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
           <a class="nav-item nav-link active " id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as postagens</a>
 
           <a (click)='findByIdUser()' class="nav-item nav-link " id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
           
-          <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contato</a>
+         
         </div>
     </nav>
       <div class="tab-content" id="nav-tabContent">
@@ -112,7 +112,7 @@
                         <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
                         <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
                         <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} pq a data nao ta funcionand ? {{item.date | date: 'HH:mm'}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às {{item.data_postagem | date: 'HH:mm'}}</small></p>
                         <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p> 
                     </div>
                   </div>
@@ -128,7 +128,7 @@
                         <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
                         <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
                         <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} pq a data nao ta funcionand ? {{item.date | date: 'HH:mm'}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às {{item.data_postagem | date: 'HH:mm'}}</small></p>
 
                         <a [routerLink]="['/postagem-edit', item.id]" class ="text-info mr-3" href="">Editar</a>
                         <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>

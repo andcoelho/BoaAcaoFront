@@ -18,14 +18,12 @@
                 <textarea [(ngModel)]="postagem.corpo" class="form-control" rows="3" name="texto" id="texto" 
                 ></textarea>
             </div>
-
+            
             <div class="form-group">
-                <label for="tema">Escolha um tema:</label>
-                <select [(ngModel)]="idTema" class="form-control" name="tema" id="tema"  (change)='findByIdTema()'>
-                    <option *ngFor="let item of listaTemas" value='{{item.id}}' >
-                        {{item.categoria}}
-                    </option>
-                </select>
+                <label for="">Categoria</label>
+                <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                    <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}} - {{item.filtro}} - {{item.localidade}}</option>
+                  </select>
             </div>
 
             <div class="d-flex justify-content-center">

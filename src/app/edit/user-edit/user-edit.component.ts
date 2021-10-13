@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/Model/User';
 import { AuthService } from 'src/app/service/auth.service';
+import { environment } from 'src/environments/environment.prod';
 
 
 
@@ -11,19 +12,30 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./user-edit.component.css']
 })
 export class  UserEditComponent implements OnInit {
-  [x: string]: any;
+  
 
   user: User = new User
   confirmarSenha: string
+  idUser: number
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private route : ActivatedRoute
   ) { }
 
   ngOnInit(){ 
     window.scroll(0,0)
+
+    if (environment.token == '') {
+      alert("Sua seção expirou.")
+      this.router.navigate(["/entrar"])
+    }
+
+    this.idUser = this.route.snapshot.params['id']
+    this.findByIdUser(this.idUser)
   }
+  
 
   confirmSenha(event: any){
     this.confirmarSenha = event.target.value
@@ -34,7 +46,7 @@ export class  UserEditComponent implements OnInit {
     if(this.user.senha != this.confirmarSenha){
       alert('As senhas estão incorretas')
     } else {
-      this.authService.atualizar(this.user).subscribe((resp: User) => {
+      this.auth.atualizar(this.user).subscribe((resp: User) => {
         this.user = resp
         alert('Usuário cadastrado com sucesso!')
         this.router.navigate(['/login'])
@@ -42,7 +54,7 @@ export class  UserEditComponent implements OnInit {
     }
   }
   findByIdUser(id: number) {
-    this.authService.getByUser(id).subscribe((resp : User) => {
+    this.auth.getByIdUser(id).subscribe((resp : User) => {
       this.user = resp
     })
   }
