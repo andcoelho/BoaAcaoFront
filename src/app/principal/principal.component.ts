@@ -28,6 +28,7 @@ export class PrincipalComponent implements OnInit {
   tema: Tema = new Tema
   listaTemas: Tema[]
   idTema: number
+  temaCategoria : string
 
   user: User = new User()
   nomeUser = environment.nome
@@ -67,6 +68,13 @@ export class PrincipalComponent implements OnInit {
   getAllPostagens(){
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
       this.listaPostagens = resp
+    })
+  }
+
+  
+  getAllTema(){
+    this.temaService.getAllTema().subscribe((resp: Tema[])=>{
+      this.listaTemas = resp
     })
   }
 
@@ -113,7 +121,8 @@ export class PrincipalComponent implements OnInit {
       this.listaTemas = resp
     })
   }
-
+ 
+  
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
