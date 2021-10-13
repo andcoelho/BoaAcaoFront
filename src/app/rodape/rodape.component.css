@@ -45,3 +45,15 @@ a{
     color: #0a0a0a;
     font-size: 20px;
   }
+
+.btn{
+  background-color: #54166f;
+  border-color: #54166f;
+  transition: all .3s ease-out;
+}
+.btn:hover{
+  color: #0a0a0a;
+  background-color: #edc927;
+  border-color: #edd151;
+  transition: all .3s ease-out;
+}
