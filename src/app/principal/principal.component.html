@@ -1,41 +1,41 @@
-
-   
-            <div class="row bg-navbar justify-content-center d-flex">
-                <div class="col-md-12">
-          
-                    <div class="row d-flex align-items-center">
-                        <div class="col-md-12  ">
-
-                          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img class="d-block w-100 " src="https://i.pinimg.com/originals/71/e2/e7/71e2e7d4807356a28042371ee8308bc8.jpg"  height="300px"  alt="Primeiro Slide">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="https://i.imgur.com/9HZQYTz.png" height="250px" alt="Segundo Slide">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="https://i.imgur.com/9HZQYTz.png" height="250px" alt="Terceiro Slide">
-                              </div>
-                            </div>
+<div class="row bg-navbar justify-content-center d-flex">
+    <div class="col-md-12">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12  ">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 "
+                                src="https://i.pinimg.com/originals/71/e2/e7/71e2e7d4807356a28042371ee8308bc8.jpg"
+                                height="250px" alt="Primeiro Slide">
                         </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://i.imgur.com/9HZQYTz.png" height="250px"
+                                alt="Segundo Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://i.imgur.com/9HZQYTz.png" height="250px"
+                                alt="Terceiro Slide">
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
                     </div>
                 </div>
             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Anterior</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Próximo</span>
-                            </a>
-                          </div>
+        </div>
+    </div>
+</div>
 <!-- Modal -->
 <div class="container justify-content-center">
     <div class="row justify-content-center mt-5">
@@ -96,18 +96,18 @@
 <div class="container  justify-content-center mt-5" id="postagens">
     <nav>
         <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-          <a class="nav-item nav-link text-navbar font-weight-bold " id="nav-todasPostagens-tab" data-toggle="tab"
-           href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" 
-           aria-selected="true">Todas as postagens</a>
+            <a class="nav-item nav-link text-navbar font-weight-bold " id="nav-todasPostagens-tab" data-toggle="tab"
+                href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
+                postagens</a>
 
-          <a (click)='findByIdUser()' class="nav-item nav-link text-navbar font-weight-bold " id="nav-minhasPostagens-tab" data-toggle="tab"
-           href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" 
-           aria-selected="false">Minhas Postagens</a>
-          
-          <a class="nav-item nav-link text-navbar font-weight-bold" id="nav-postagensTema-tab" data-toggle="tab"
-          href="#postagensTema" role="tab" aria-controls="nav-postagensTema" aria-selected="false">Postagens por
-          tema</a>
-         
+            <a (click)='findByIdUser()' class="nav-item nav-link text-navbar font-weight-bold "
+                id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab"
+                aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
+
+            <a class="nav-item nav-link text-navbar font-weight-bold" id="nav-postagensTema-tab" data-toggle="tab"
+                href="#postagensTema" role="tab" aria-controls="nav-postagensTema" aria-selected="false">Postagens por
+                tema</a>
+
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -119,7 +119,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <input type="text" class="form-control" id="titulo"
-                            placeholder="Pesquisa uma postagem pelo titulo" [(ngModel)]='tituloPost'
+                            placeholder="Pesquise uma postagem pelo titulo" [(ngModel)]='tituloPost'
                             (keyup)='findByTituloPostagem()'>
                     </div>
                 </div>
@@ -136,12 +136,13 @@
                         <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
                         <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
                         <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às {{item.data_postagem | date: 'HH:mm'}}</small></p>
-                     <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p> 
+                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às
+                                {{item.data_postagem | date: 'HH:mm'}}</small></p>
+                        <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p>
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
         <!-- Cards minhas postagens -->
         <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
             <div class="card-columns mt-3">
@@ -155,44 +156,47 @@
                         <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às
                                 {{item.data_postagem | date: 'HH:mm'}}</small></p>
 
-                        <a [routerLink]="['/postagem-edit', item.id]" class ="text-info mr-3" href="">Editar</a>
+                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
                         <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
                     </div>
-                  </div>
                 </div>
-
             </div>
-       
+
+        </div>
+
         <!-- Cards postagens por Tema>-->
-               
-        <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="nav-postagensTema-tab">   
+
+        <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="nav-postagensTema-tab">
             <!-- Pesquisa postagem -->
+            
             <div class="row d-flex justify-content-center mt-5 mb-5">
                 <div class="col-md-4">
-                  <div class="form-group">
-                    <div class="form-group text-center">
-                        <label  for="">Categorias :</label>
-                        <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
-                            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}} - {{item.filtro}} - {{item.localidade}}</option>
-                          </select>
-                  </div>
+                    <div class="form-group">
+                        <div class="form-group text-center">
+                            <label for="">Categorias :</label>
+                            <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema'
+                                (change)='findByIdTema()'>
+                                <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}} - {{item.filtro}} - {{item.localidade}}</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-              </div>
 
-            <!-- Cards todas as postagens -->
-            <div class="card-columns mt-3">
-                <div class="card" style="width: 18rem;" *ngFor = "let item of listaPostagens">
-                    <div>
-                        <img class="card-img-top" src="{{item.img_endereco}}" alt="">
+                <!-- Cards todas as postagens -->
+                <div class="card-columns mt-3">
+                    <div class="card" style="width: 18rem;" *ngFor="let item of listaPostagens">
+                        <div>
+                            <img class="card-img-top" src="{{item.img_endereco}}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title m-0">{{item.titulo}}</h5>
+                            <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
+                            <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
+                            <p class="card-text mt-3">{{item.corpo}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}}
+                                    às {{item.data_postagem | date: 'HH:mm'}}</small></p>
+                            <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title m-0">{{item.titulo}}</h5>
-                        <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
-                        <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
-                        <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às {{item.data_postagem | date: 'HH:mm'}}</small></p>
-                     <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p> 
-                    </div>
-                  </div>
+                </div>
             </div>
-        </div>   
