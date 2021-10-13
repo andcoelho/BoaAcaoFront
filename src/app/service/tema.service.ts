@@ -9,6 +9,9 @@ import { Tema } from '../Model/Tema';
   providedIn: 'root'
 })
 export class TemaService {
+  getByCategoria(temaCategoria: string) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient) { }
 

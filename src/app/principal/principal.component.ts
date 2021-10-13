@@ -94,6 +94,7 @@ export class PrincipalComponent implements OnInit {
     })
   }
 
+
   findByNomeUser(){
     this.authService.getByNomeUser(this.nomeUser).subscribe((resp: User)=>{
       this.user = resp
@@ -111,6 +112,16 @@ export class PrincipalComponent implements OnInit {
       this.getAllPostagens()
     }else{
       this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=>{
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByCategoria(){
+    if(this.temaCategoria == ''){
+      this.getAllPostagens()
+    }else{
+      this.postagemService.getByCategoria(this.tituloPost).subscribe((resp: Postagem[])=>{
         this.listaPostagens = resp
       })
     }

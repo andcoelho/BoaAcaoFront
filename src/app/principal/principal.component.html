@@ -172,7 +172,8 @@
                   <div class="form-group">
                     <div class="form-group text-center">
                         <label  for="">Categorias :</label>
-                        <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                        <select class="form-control" name="tema" id="tema" [(ngModel)]='temaCategoria'
+                        (keyup)='findByTituloPostagem()'>
                             <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.categoria}} - {{item.filtro}} - {{item.localidade}}</option>
                           </select>
                   </div>
@@ -188,7 +189,7 @@
                     <div class="card-body">
                         <h5 class="card-title m-0">{{item.titulo}}</h5>
                         <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
-                        <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
+                        <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.categoria}}</small></p>
                         <p class="card-text mt-3">{{item.corpo}}</p>
                         <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às {{item.data_postagem | date: 'HH:mm'}}</small></p>
                      <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p> 
