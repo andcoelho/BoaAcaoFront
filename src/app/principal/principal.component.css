@@ -18,9 +18,10 @@ a{
 
 .botao-menu-lateral {
 	border-color: #422157;
-    color: #422157
+    color: #422157;
+    font-family: arial
 }
-  a:hover{
+a:hover{
     background-color: #422157;
     border-color: #422157;
     color: #EDC927;
@@ -28,12 +29,6 @@ a{
 
 .bt-edicao{
     background-color: #422157;
-    color: #EDC927;
-    font-family: arial;
-}
-
-.botao-menu-lateral{
-    border-color: #EDC927;
     color: #EDC927;
     font-family: arial;
 }
