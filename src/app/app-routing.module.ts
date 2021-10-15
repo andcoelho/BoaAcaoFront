@@ -9,16 +9,10 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { PrincipalComponent } from './principal/principal.component';
 
 import { MenulogadoComponent } from './menulogado/menulogado.component';
-
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
-
 import { SobreComponent } from './sobre/sobre.component';
-
-
-
- 
 
 const routes: Routes = [
 

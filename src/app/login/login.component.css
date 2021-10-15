@@ -39,7 +39,7 @@
     min-width: 95%
   }
 
-  a:hover{
+  button:hover{
     background-color: #EDC927;
     border-color: #EDC927;
     color: #422157;
