@@ -40,17 +40,16 @@
     <div class="row">
         <div class="col-2">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link botao-modal" id="v-pills-home-tab" href="#v-pills-home" role="tab"
+                <a class="nav-link " id="v-pills-home-tab" href="/inicio" role="tab"
                     aria-controls="v-pills-home" aria-selected="false">Home</a>
-                <a class="nav-link" id="v-pills-profile-tab"  href="#v-pills-profile" role="tab"
+                <a class="nav-link" id="v-pills-profile-tab"  [routerLink]="['/user-edit', id]"  role="tab"
                     aria-controls="v-pills-profile" aria-selected="false">Meu perfil</a>
-                <a class="nav-link" id="v-pills-messages-tab"  href="#v-pills-messages" role="tab"
-                    aria-controls="v-pills-messages" aria-selected="false">Mensagens</a>
-                <a class="nav-link" id="v-pills-settings-tab"  href="#v-pills-settings" role="tab"
-                    aria-controls="v-pills-settings" aria-selected="false">Configurações</a>
-                <a class="nav-link" id="v-pills-settings-tab"  href="#v-pills-settings" role="tab"
-                    aria-controls="v-pills-settings" aria-selected="false">Configurações</a>
-                <a class="nav-link" id="v-pills-settings-tab"  href="#v-pills-settings" role="tab"
+                <a class="nav-link" id="v-pills-messages-tab"  routerLink ="/sobre"  role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Sobre</a>
+                <a class="nav-link" id="v-pills-settings-tab" routerLink ="/equipe"  role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Equipe</a>
+            
+                <a class="nav-link" id="v-pills-settings-tab"  href="/inicio" role="tab"
                     aria-controls="v-pills-settings" aria-selected="false">Sair</a>
             </div>
         </div>
