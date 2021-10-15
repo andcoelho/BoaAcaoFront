@@ -11,12 +11,14 @@ export class MenulogadoComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
+  id = environment.id
 
   constructor(
     private router: Router 
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
   }
 
   sair(){

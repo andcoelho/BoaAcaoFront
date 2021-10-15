@@ -27,6 +27,7 @@ import { SobreComponent } from './sobre/sobre.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { SobreComponent } from './sobre/sobre.component';
 
     PostagemEditComponent,
     PostagemDeleteComponent,
-    SobreComponent
+    SobreComponent,
+
 
 
   ],

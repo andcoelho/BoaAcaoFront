@@ -8,6 +8,9 @@ import { Postagem } from '../Model/Postagem';
   providedIn: 'root'
 })
 export class PostagemService {
+  getByCategoria(temaCategoria: string) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient) {}
 
