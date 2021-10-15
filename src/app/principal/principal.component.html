@@ -4,14 +4,14 @@
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link botao-menu-lateral" id="v-pills-home-tab" routerLink="/principal" role="tab"
                     aria-controls="v-pills-home" aria-selected="false">Home</a>
-                <a class="nav-link botao-menu-lateral" id="v-pills-profile-tab"  [routerLink]="['/user-edit', id]"  role="tab"
-                    aria-controls="v-pills-profile" aria-selected="false">Meu perfil</a>
-                <a class="nav-link botao-menu-lateral" id="v-pills-messages-tab"  routerLink ="/sobre"  role="tab"
+                <a class="nav-link botao-menu-lateral" id="v-pills-profile-tab" [routerLink]="['/user-edit', id]"
+                    role="tab" aria-controls="v-pills-profile" aria-selected="false">Meu perfil</a>
+                <a class="nav-link botao-menu-lateral" id="v-pills-messages-tab" routerLink="/sobre" role="tab"
                     aria-controls="v-pills-messages" aria-selected="false">Sobre</a>
-                <a class="nav-link botao-menu-lateral" id="v-pills-settings-tab" routerLink ="/equipe"  role="tab"
+                <a class="nav-link botao-menu-lateral" id="v-pills-settings-tab" routerLink="/equipe" role="tab"
                     aria-controls="v-pills-settings" aria-selected="false">Equipe</a>
-            
-                <a class="nav-link botao-menu-lateral" id="v-pills-settings-tab"  href="/inicio" role="tab"
+
+                <a class="nav-link botao-menu-lateral" id="v-pills-settings-tab" href="/inicio" role="tab"
                     aria-controls="v-pills-settings" aria-selected="false">Sair</a>
             </div>
         </div>
@@ -26,8 +26,7 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100 "
-                                    src="../../assets/img/BOA ACAO LOGO DEGRADE NOME ROXO.png"
+                                <img class="d-block w-100 " src="../../assets/img/BOA ACAO LOGO DEGRADE NOME ROXO.png"
                                     height="250px" alt="Primeiro Slide">
                             </div>
                             <div class="carousel-item">
@@ -38,16 +37,16 @@
                                 <img class="d-block w-100" src="https://i.imgur.com/9HZQYTz.png" height="250px"
                                     alt="Terceiro Slide">
                             </div>
-                            <a class="carousel-control-prev ignore-hover" href="#carouselExampleIndicators" role="button"
-                                data-slide="prev">
+                            <a class="carousel-control-prev ignore-hover" href="#carouselExampleIndicators"
+                                role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Anterior</span>
-                        </a>
+                            </a>
                             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
                                 data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Próximo</span>
-                    </a>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -61,20 +60,19 @@
     <div class="row justify-content-center mt-5">
         <!-- Botão para acionar modal -->
 
-        
-
-        <div class="container d-flex justify-content-center color-text pub" >   
-            <div class="retangulo  ">
- <div class="row">
-         <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid  rounded-circle ml-3 mr-3 ">     
-        
-
-        <button type="button "  class="btn btn-success  botao-modal text-center justify-content-center "  data-toggle="modal" data-target="#modalExemplo">
-        Faça seu pedido/doação aqui...
-        </button>
-    </div>
-</div></div>
-        <div class="modal fade "  id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="container d-flex justify-content-center color-text pub">
+            <div class="retangulo">
+                <div class="row">
+                    <img src="{{foto}}" alt="imagem do user" width="50px" height="50px"
+                        class="img  rounded-circle ml-3 mr-3 ">
+                    <button type="button " class="btn btn-success  botao-modal text-center justify-content-center "
+                        data-toggle="modal" data-target="#modalExemplo">
+                        Faça seu pedido/doação aqui...
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered " role="document">
                 <div class="modal-content">
@@ -123,69 +121,73 @@
 
 
 
-<!-- Abas -->
-<div class="container  justify-content-center mt-5" id="postagens">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link text-navbar font-weight-bold " id="nav-todasPostagens-tab" data-toggle="tab"
-                href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
-                postagens</a>
+        <!-- Abas -->
+        <div class="container  justify-content-center mt-5" id="postagens">
+            <nav>
+                <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link text-navbar font-weight-bold " id="nav-todasPostagens-tab"
+                        data-toggle="tab" href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens"
+                        aria-selected="true">Todas as
+                        postagens</a>
 
-            <a (click)='findByIdUser()' class="nav-item nav-link text-navbar font-weight-bold "
-                id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab"
-                aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
+                    <a (click)='findByIdUser()' class="nav-item nav-link text-navbar font-weight-bold "
+                        id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab"
+                        aria-controls="nav-minhasPostagens" aria-selected="false">Minhas Postagens</a>
 
 
-        </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
-            aria-labelledby="nav-todasPostagens-tab">
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
+                    aria-labelledby="nav-todasPostagens-tab">
 
-            <!-- Pesquisa postagem -->
-            <div class="row d-flex justify-content-center mt-5 mb-5">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="titulo"
-                            placeholder="Pesquise uma postagem pelo titulo" [(ngModel)]='tituloPost'
-                            (keyup)='findByTituloPostagem()'>
+                    <!-- Pesquisa postagem -->
+                    <div class="row d-flex justify-content-center mt-5 mb-5">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="titulo"
+                                    placeholder="Pesquise uma postagem pelo titulo" [(ngModel)]='tituloPost'
+                                    (keyup)='findByTituloPostagem()'>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards todas as postagens -->
+                    <div class="card-columns mt-3">
+                        <div class="card" style="width: 18rem;" *ngFor="let item of listaPostagens">
+                            <div>
+                                <img class="card-img-top" src="{{item.img_endereco}}" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title m-0">{{item.titulo}}</h5>
+                                <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
+                                <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
+                                <p class="card-text mt-3">{{item.corpo}}</p>
+                                <p class="card-text"><small class="text-muted">{{item.data_postagem | date:
+                                        'dd/MM/yyyy'}} às
+                                        {{item.data_postagem | date: 'HH:mm'}}</small></p>
+                                <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <!-- Cards minhas postagens -->
+                <div class="tab-pane fade" id="minhasPostagens" role="tabpanel"
+                    aria-labelledby="nav-minhasPostagens-tab">
+                    <div class="card-columns mt-3">
+                        <div class="card" style="width: 18rem;" *ngFor="let item of user.postagem">
+                            <img class="card-img-top" src="{{item.img_endereco}}" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title m-0">{{item.titulo}}</h5>
+                                <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
+                                <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
+                                <p class="card-text mt-3">{{item.corpo}}</p>
+                                <p class="card-text"><small class="text-muted">{{item.data_postagem | date:
+                                        'dd/MM/yyyy'}} às
+                                        {{item.data_postagem | date: 'HH:mm'}}</small></p>
 
-            <!-- Cards todas as postagens -->
-            <div class="card-columns mt-3">
-                <div class="card" style="width: 18rem;" *ngFor="let item of listaPostagens">
-                    <div>
-                        <img class="card-img-top" src="{{item.img_endereco}}" alt="">
+                                <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                                <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title m-0">{{item.titulo}}</h5>
-                        <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
-                        <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
-                        <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às
-                                {{item.data_postagem | date: 'HH:mm'}}</small></p>
-                        <p class="card-text"><small class="text-muted"> Por: {{item.usuario.nome}}</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Cards minhas postagens -->
-        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-            <div class="card-columns mt-3">
-                <div class="card" style="width: 18rem;" *ngFor="let item of user.postagem">
-                    <img class="card-img-top" src="{{item.img_endereco}}" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title m-0">{{item.titulo}}</h5>
-                        <small class="text-muted">Categoria: {{item.tema.categoria}}</small>
-                        <p class="card-text"><small class="text-muted"> Filtro: {{item.tema.filtro}}</small></p>
-                        <p class="card-text mt-3">{{item.corpo}}</p>
-                        <p class="card-text"><small class="text-muted">{{item.data_postagem | date: 'dd/MM/yyyy'}} às
-                                {{item.data_postagem | date: 'HH:mm'}}</small></p>
-
-                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
-                    </div>
-                </div>
-            </div>
